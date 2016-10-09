@@ -40,3 +40,19 @@ get_state_geocodes <- function(){
   save(stategeo,file="~/R/stategeocodes.R",ascii=TRUE);
   
 }
+
+show_tweet <- function(id)
+{
+  url = "https://api.twitter.com/1.1/statuses/show.json"
+  return fetchfromtwitter(url,c("id"=id))
+}
+
+find_tweets <- function(query) {
+  url = "https://api.twitter.com/1.1/search/tweets.json";
+  return(fetchfromtwitter(url,query));
+}
+
+tweet_per_state <- function(query){
+  read("/R/")
+  
+}
