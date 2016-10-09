@@ -41,10 +41,9 @@ get_state_geocodes <- function(){
   
 }
 
-show_tweet <- function(id)
-{
-  url = "https://api.twitter.com/1.1/statuses/show.json"
-  return fetchfromtwitter(url,c("id"=id))
+show_tweet <- function(id){
+  url <- "https://api.twitter.com/1.1/statuses/show.json"
+  return(fetchfromtwitter(url,c("id"=id)))
 }
 
 find_tweets <- function(query) {
